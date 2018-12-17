@@ -19,7 +19,7 @@ public interface APIService {
     Call<User> getProfile(@Path("username") String username);
 
     @GET("{username}/followers")
-    Call<Follower> getFollowers(@Path("username") String username);
+    Call<List<User>> getFollowers(@Path("username") String username);
 
 
     static APIService createAPIService() {
