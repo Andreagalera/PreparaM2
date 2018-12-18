@@ -92,12 +92,10 @@ public class Profile extends MainActivity {
                     Picasso.with(getApplicationContext()).load(user.avatar_url).into(activityProfileIVInternet);
 
                     Log.i("Repos:" + user.public_repos, response.message());
-                    //numrepostxt.setText(user.public_repos);
-                    numrepostxt.setText(String.valueOf(user.public_repos));
+                    numrepostxt.setText(" "+user.public_repos);
 
                     Log.i("Followers:" + user.followers, response.message());
-                    numfollowstxt.setText(user.followers);
-                    numfollowstxt.setText(String.valueOf(user.followings));
+                    numfollowstxt.setText(" "+user.followers);
 
                     progressDialog.hide();
 
